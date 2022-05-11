@@ -1,0 +1,17 @@
+.nav {
+  background-color: red;
+  width: 1900px;
+  height: 42px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.nav-menu-items {
+  display: flex;
+  width: 683px;
+  height: 42px;
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+}

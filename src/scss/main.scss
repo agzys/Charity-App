@@ -1,6 +1,18 @@
 @import "../../node_modules/reset-css/sass/reset";
 @import "./settings/fonts";
+@import "./settings/homeHeader";
+@import "./settings/homeThreeColumn";
+@import "./settings/homeSteps";
+@import "./settings/aboutUs";
+@import "./settings/whoWeHelp";
+@import "./settings/homeContact";
+@import "./settings/login";
+@import "./settings/register";
+@import "./settings/homeNav";
 
 body {
+  margin: 0 auto;
   font-family: $font-base;
+  max-width: 1900px;
+  height: 5080px;
 }
