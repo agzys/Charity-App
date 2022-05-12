@@ -1,10 +1,32 @@
+@import "./colors";
+
 .nav {
-  background-color: red;
   width: 1900px;
   height: 42px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  margin-bottom: 8px;
+
+  .nav-log-btn {
+    width: 90px;
+    height: 36px;
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    margin-right: 11px;
+  }
+  .nav-log-btn:hover,
+  .nav-create-account-btn:hover {
+    background-color: $border-btn-create-account-color;
+  }
+  .nav-create-account-btn {
+    width: 90px;
+    height: 36px;
+    background-color: white;
+    font-size: 14px;
+    border: 2px solid $border-btn-create-account-color;
+  }
 }
 
 .nav-menu-items {
@@ -14,4 +36,22 @@
   font-size: 18px;
   justify-content: space-between;
   align-items: center;
+  margin-right: 55px;
+}
+
+.link-text {
+  text-decoration: none;
+}
+
+.btn-text {
+  color: $log-create-account-text-color;
+}
+
+.menu-text {
+  color: $text-color;
+  cursor: pointer;
+}
+li:hover {
+  padding-bottom: 4px;
+  border-bottom: 4px solid $border-btn-create-account-color;
 }
