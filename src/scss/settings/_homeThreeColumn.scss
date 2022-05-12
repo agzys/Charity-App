@@ -1,5 +1,32 @@
+@import "./colors";
+
 .three-column {
   width: 1900px;
   height: 384px;
-  background-color: yellow;
+  background-image: url(../../assets/3-column-background.png);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+
+  .three-column-item {
+    width: 334px;
+    margin: 70px 143px 143px 163px;
+    color: $text-color;
+    .three-column-item-number {
+      font-size: 90px;
+      text-align: center;
+    }
+    .three-column-item-name {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 28px;
+      margin-top: 12px;
+      text-transform: uppercase;
+    }
+    .three-column-item-text {
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
 }
