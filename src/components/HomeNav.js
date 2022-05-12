@@ -20,7 +20,7 @@ function HomeNav() {
       <div className='nav-menu'>
         <ul className='nav-menu-items'>
           <li>
-            <Link to='/' className='link-text menu-text'>
+            <Link to='/' className='link-text menu-text nav-menu-start'>
               Start
             </Link>
           </li>

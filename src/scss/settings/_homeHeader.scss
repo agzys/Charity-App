@@ -1,11 +1,60 @@
+@import "./colors";
 .home-header {
   width: 1758px;
   height: 963px;
-  background-color: aqua;
+  //background-color: aqua;
   display: flex;
   .home-header-picture {
     width: 885px;
     height: 963px;
-    background-color: antiquewhite;
+    background-image: url(../../assets/Home-Hero-Image.jpg);
+    background-size: cover;
+    background-position-x: -500px;
+  }
+  .home-header-start {
+    font-size: 38px;
+    text-align: center;
+    margin: 342px 0 0 66px;
+
+    .decoration {
+      margin: 0 auto;
+      margin-top: 25px;
+      margin-bottom: 65px;
+      width: 253px;
+      height: 33px;
+      background-image: url(../../assets/Decoration.svg);
+    }
+    .home-header-btns {
+      height: 120px;
+      display: flex;
+
+      .hand-over-btn {
+        width: 310px;
+        height: 120px;
+        border: 1px solid $text-color;
+        font-size: 30px;
+        color: $text-color;
+        font-weight: 300;
+        background-color: white;
+      }
+      .collection-btn {
+        width: 310px;
+        height: 120px;
+        border: 1px solid $text-color;
+        margin-left: 44px;
+        font-size: 30px;
+        color: $text-color;
+        font-weight: 300;
+        background-color: white;
+      }
+      .header-btns-text {
+        color: $text-color;
+      }
+      .hand-over-btn:hover,
+      .collection-btn:hover {
+        background-color: $border-btn-create-account-color;
+        border: none;
+      }
+    }
   }
 }
