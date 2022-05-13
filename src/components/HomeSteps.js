@@ -41,7 +41,8 @@ function HomeSteps() {
       <div className='steps-hand-over'>
         <button className='steps-hand-over-btn'>
           <Link to='/logowanie' className='link-text steps-hand-over-btn-text'>
-            ODDAJ RZECZY
+            ODDAJ <br />
+            RZECZY
           </Link>
         </button>
       </div>

@@ -1,5 +1,39 @@
+@import "./colors";
 .about-us {
   width: 1900px;
   height: 935px;
-  background-color: aquamarine;
+  margin-top: 80px;
+  display: flex;
+
+  .about-us-info {
+    width: 958px;
+    height: 935px;
+    background-color: $background-color;
+
+    .about-us-info-title {
+      color: $text-color;
+      font-size: 38px;
+      text-align: center;
+      margin-top: 186px;
+    }
+    .about-us-info-text {
+      color: $text-color;
+      font-size: 30px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .about-us-signature {
+      width: 209px;
+      height: 148px;
+      background-image: url(../../assets/Signature.svg);
+      margin-left: 600px;
+      margin-top: 35px;
+    }
+  }
+
+  .about-us-picture {
+    width: 942px;
+    height: 935px;
+    background-image: url(../../assets/People.jpg);
+  }
 }

@@ -15,7 +15,7 @@ function HomeHeader() {
         <div className='home-header-btns'>
           <button className='hand-over-btn'>
             <Link to='/logowanie' className='link-text header-btns-text'>
-              ODDAJ RZECZY
+              ODDAJ <br /> RZECZY
             </Link>
           </button>
           <button className='collection-btn'>
