@@ -1,5 +1,91 @@
+@import "./colors";
+
 .steps {
   width: 1900px;
   height: 624px;
-  background-color: gray;
+  margin-top: 55px;
+
+  .steps-title {
+    font-size: 38px;
+    color: $text-color;
+    text-align: center;
+  }
+
+  .steps-explain {
+    width: 1900px;
+    height: 325px;
+    background-color: $background-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .steps-explain-item-first {
+      margin-left: 414px;
+    }
+    .steps-explain-item-last {
+      margin-right: 414px;
+    }
+    .steps-explain-item {
+      width: 164px;
+      height: 175px;
+
+      .steps-explain-item-icon {
+        margin: 0 auto;
+        width: 83px;
+        height: 83px;
+        margin-bottom: 8px;
+      }
+      .t-shirt-icon {
+        background-image: url(../../assets/Icon-1.svg);
+      }
+      .bag-icon {
+        background-image: url(../../assets/Icon-2.svg);
+      }
+      .loupe-icon {
+        background-image: url(../../assets/Icon-3.svg);
+      }
+      .circle-icon {
+        background-image: url(../../assets/Icon-4.svg);
+      }
+
+      .steps-explain-item-title {
+        text-align: center;
+        font-size: 18px;
+        color: $text-color;
+      }
+
+      .steps-explain-line {
+        width: 70px;
+        color: $text-color;
+      }
+      .steps-explain-item-text {
+        text-align: center;
+        font-size: 16px;
+        color: $text-color;
+      }
+    }
+  }
+  .steps-hand-over {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .steps-hand-over-btn {
+      width: 310px;
+      height: 120px;
+      border: 1px solid $text-color;
+      font-size: 30px;
+      color: $text-color;
+      font-weight: 300;
+      background-color: white;
+
+      .steps-hand-over-btn-text {
+        color: $text-color;
+      }
+    }
+    .steps-hand-over-btn:hover {
+      background-color: $border-btn-create-account-color;
+      border: none;
+    }
+  }
 }
