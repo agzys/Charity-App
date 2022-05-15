@@ -1,0 +1,56 @@
+[
+  {
+    "id": "coll1",
+    "fundationName": "'Lorem Ipsum 1'",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "needs": "egestas, sed, tempus"
+  },
+  {
+    "id": "coll2",
+    "fundationName": "'Lorem Ipsum 2'",
+    "goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+    "needs": "ut, aliquam, purus, sit, amet"
+  },
+  {
+    "id": "coll3",
+    "fundationName": "'Lorem Ipsum 3'",
+    "goal": "Scelerisque in dictum non consectetur a erat nam.",
+    "needs": "mi, quis, hendrerit, dolor"
+  },
+  {
+    "id": "coll4",
+    "fundationName": "'Lorem Ipsum 4'",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "needs": "egestas, sed, tempus"
+  },
+  {
+    "id": "coll5",
+    "fundationName": "'Lorem Ipsum 5'",
+    "goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+    "needs": "ut, aliquam, purus, sit, amet"
+  },
+  {
+    "id": "coll6",
+    "fundationName": "'Lorem Ipsum 6'",
+    "goal": "Scelerisque in dictum non consectetur a erat nam.",
+    "needs": "mi, quis, hendrerit, dolor"
+  },
+  {
+    "id": "coll7",
+    "fundationName": "'Lorem Ipsum 7'",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "needs": "egestas, sed, tempus"
+  },
+  {
+    "id": "coll8",
+    "fundationName": "'Lorem Ipsum 8'",
+    "goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+    "needs": "ut, aliquam, purus, sit, amet"
+  },
+  {
+    "id": "coll9",
+    "fundationName": "'Lorem Ipsum 9'",
+    "goal": "Scelerisque in dictum non consectetur a erat nam.",
+    "needs": "mi, quis, hendrerit, dolor"
+  }
+]

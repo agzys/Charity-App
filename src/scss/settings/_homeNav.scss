@@ -37,6 +37,11 @@
   justify-content: space-between;
   align-items: center;
   margin-right: 55px;
+
+  li:hover {
+    padding-bottom: 4px;
+    border-bottom: 4px solid $border-btn-create-account-color;
+  }
 }
 
 .link-text {
@@ -50,8 +55,4 @@
 .menu-text {
   color: $text-color;
   cursor: pointer;
-}
-li:hover {
-  padding-bottom: 4px;
-  border-bottom: 4px solid $border-btn-create-account-color;
 }

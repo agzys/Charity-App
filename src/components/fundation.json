@@ -1,0 +1,56 @@
+[
+  {
+    "id": "fun1",
+    "fundationName": "'Dbam o zdrowie'",
+    "goal": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+    "needs": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+  },
+  {
+    "id": "fun2",
+    "fundationName": "'Dla dzieci'",
+    "goal": "Pomoc dzieciom z ubogich rodzin.",
+    "needs": "ubrania, meble, zabawki"
+  },
+  {
+    "id": "fun3",
+    "fundationName": "Bez domu",
+    "goal": "Pomoc dla osób nie posiadającyh miejsca zamieszkania.",
+    "needs": "ubrania, jedzenie, ciepłe koce"
+  },
+  {
+    "id": "fun4",
+    "fundationName": "Mali przyjaciele",
+    "goal": "Pomoc bezdomnym zwierzakom.",
+    "needs": "koce, zabawki dla zwierząt, karma sucha i mokra"
+  },
+  {
+    "id": "fun5",
+    "fundationName": "Wysportowani",
+    "goal": "Pomoc dla szkół i przedszkoli w udoskonalaniu umiejętmości sportowych. ",
+    "needs": "piłki, odzież sportowa, sprzęt sportowy"
+  },
+  {
+    "id": "fun6",
+    "fundationName": "Girls Power",
+    "goal": "Pomoc dziewczynkom z ubogich rodzin.",
+    "needs": "podpaski, środki czystości, kosmetyki"
+  },
+  {
+    "id": "fun7",
+    "fundationName": "Start w IT",
+    "goal": "Pomoc nastolatkom w doskonaleniu umiejętności programistycznych.",
+    "needs": "komputery, laptopy, monitory, książki"
+  },
+  {
+    "id": "fun8",
+    "fundationName": "Sztuka dla sztuki",
+    "goal": "Pomoc uzdolnionym artystycznie dzieciom w rozwoju ich umiejętności.",
+    "needs": "farby akrylowe, akwarele, olejne, pędzle, szpachle"
+  },
+  {
+    "id": "fun9",
+    "fundationName": "Nowy dom",
+    "goal": "Pomoc ubogim rodzinom w podniesieniu ich standardu życia.",
+    "needs": "meble, sprzęt AGD, komputery, zabawki"
+  }
+]

@@ -1,6 +1,86 @@
+@import "./colors";
+@import "./fonts";
+
 .who-we-help {
   width: 1344px;
   height: 862px;
-  background-color: bisque;
   margin: 0 auto;
+  .who-we-help-title {
+    margin-top: 70px;
+    font-size: 38px;
+    text-align: center;
+  }
+  .who-we-help-text {
+    margin: 0 auto;
+    width: 640px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 66px;
+  }
+}
+.who-we-help-btns {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  button {
+    width: 208px;
+    height: 80px;
+    font-size: 24px;
+    background-color: white;
+  }
+}
+
+button.active {
+  background-color: $border-btn-create-account-color;
+  border: none;
+}
+
+.who-we-help-info {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .who-we-help-name {
+    font-size: 26px;
+    color: $text-color;
+  }
+  .who-we-help-mission {
+    font-family: $font-alt;
+    font-size: 18px;
+    color: $text-color;
+    margin-top: 5px;
+  }
+  .who-we-help-needs {
+    font-family: $font-alt;
+    font-size: 18px;
+    text-align: left;
+  }
+  .who-we-help-line {
+    width: 600px;
+    color: $text-color;
+  }
+}
+
+.pagination-btns {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 24px;
+  margin-top: 30px;
+  .previous-btn,
+  .next-btn {
+    display: none;
+  }
+}
+.pagination-btns a {
+  width: 10px;
+  font-size: 18px;
+  color: $text-color;
+  border: 1px solid #707070;
+  padding: 5px;
+  margin: 16px;
+  cursor: pointer;
 }
