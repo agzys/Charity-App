@@ -8,8 +8,8 @@ function WhoWeHelp() {
   const [activeSection, setActiveSection] = useState("fundations");
 
   const [infos, setInfos] = useState(FundationsJsonData.slice(0, 9));
-  const [orgsInfos, setOrgsInfos] = useState(OrganizationsJsonData.slice(0, 9));
-  const [collInfos, setcollInfos] = useState(CollectionsJsonData.slice(0, 9));
+  const [orgsInfos, setOrgsInfos] = useState(OrganizationsJsonData.slice(0, 6));
+  const [collInfos, setcollInfos] = useState(CollectionsJsonData.slice(0, 3));
 
   const [pageNumber, setPageNumber] = useState(0);
 
@@ -127,7 +127,7 @@ function WhoWeHelp() {
           </p>
           {displayOrgsInfos}
           <ReactPaginate
-            pageCount={3}
+            pageCount={2}
             onPageChange={changePage}
             containerClassName={"pagination-btns"}
             previousLinkClassName={"previous-btn"}
@@ -144,7 +144,6 @@ function WhoWeHelp() {
           </p>
           {displayCollInfo}
           <ReactPaginate
-            pageCount={3}
             onPageChange={changePage}
             containerClassName={"pagination-btns"}
             previousLinkClassName={"previous-btn"}
