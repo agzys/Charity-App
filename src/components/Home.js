@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeContact from "./HomeContact";
 import HomeHeader from "./HomeHeader";
@@ -15,6 +16,7 @@ function Home() {
       <HomeAboutUs />
       <WhoWeHelp />
       <HomeContact />
+      <Footer />
     </>
   );
 }

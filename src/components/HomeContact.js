@@ -17,6 +17,22 @@ function HomeContact() {
     setIsSubmit(true);
   };
 
+  const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`;
+
+  fetch(url, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formValues),
+  })
+    .then(res => res.json())
+    .then(res => {
+      console.log("Dodałem użytkownika:");
+      console.log(res);
+      console.log(formValues);
+    });
+
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
