@@ -1,5 +1,5 @@
 import Home from "./components/Home";
-import "./scss/main.scss";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeNav from "./components/HomeNav";
 import Login from "./components/Login";

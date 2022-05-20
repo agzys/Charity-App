@@ -20,7 +20,7 @@ function HomeContact() {
   const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`;
 
   fetch(url, {
-    method: "post",
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
@@ -29,7 +29,8 @@ function HomeContact() {
     .then(res => res.json())
     .then(res => {
       console.log("Dodałem użytkownika:");
-      console.log(res);
+
+      console.log(res.status);
       console.log(formValues);
     });
 
