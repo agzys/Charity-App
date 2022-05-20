@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -19,8 +20,12 @@ function Login() {
         </div>
       </form>
       <div className='form-btns'>
-        <button className='create-account-btn'>Załóż konto</button>
-        <button className='log-in-btn'>Zaloguj się</button>
+        <button className='create-account-btn'>
+          <Link to='/rejestracja' className='link-text btn-text'>
+            Załóż konto
+          </Link>
+        </button>
+        <button className='log-in-btn btn-text'>Zaloguj się</button>
       </div>
     </section>
   );

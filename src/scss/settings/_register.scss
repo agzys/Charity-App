@@ -1,5 +1,57 @@
+@import "../settings/colors";
 .register {
+  margin: 0 auto;
   width: 1900px;
   height: 946px;
-  background-color: antiquewhite;
+}
+.register-title {
+  font-size: 32px;
+  color: $text-color;
+  text-align: center;
+  margin-top: 135px;
+}
+
+.register-form {
+  margin: 0 auto;
+  width: 385px;
+  height: 335px;
+  background-color: $background-color;
+  padding-top: 40px;
+}
+.register-form-values {
+  margin-top: 20px;
+  margin-left: 67px;
+  width: 250px;
+  height: 60px;
+}
+.register-form-text {
+  font-size: 16px;
+}
+.register-form-input {
+  margin-top: 20px;
+  width: 250px;
+  background-color: $background-color;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.form-btns {
+  width: 480px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  .create-account-btn {
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .log-in-btn {
+    font-size: 18px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid $log-create-account-text-color;
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function HomeContact() {
-  const contactValues = { username: "", email: "", message: "" };
+  const contactValues = { name: "", email: "", message: "" };
   const [formValues, setFormValues] = useState(contactValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -15,24 +15,25 @@ function HomeContact() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+
+    const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`;
+
+    if (isSubmit) {
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log("Dodałem użytkownika:");
+          console.log(res.status);
+          console.log(formValues);
+        });
+    }
   };
-
-  const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`;
-
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formValues),
-  })
-    .then(res => res.json())
-    .then(res => {
-      console.log("Dodałem użytkownika:");
-
-      console.log(res.status);
-      console.log(formValues);
-    });
 
   useEffect(() => {
     console.log(formErrors);
@@ -45,8 +46,8 @@ function HomeContact() {
     const errors = {};
     const regex =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    if (!values.username) {
-      errors.username = "Podane imię jest nieprawidłowe!";
+    if (!values.name) {
+      errors.name = "Podane imię jest nieprawidłowe!";
     }
     if (!values.email) {
       errors.email = "Podaney email jest nieprawidłowy!";
@@ -63,22 +64,26 @@ function HomeContact() {
 
   return (
     <section className='home-contact' id='contactSection'>
-      <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       <form onSubmit={handleSubmit} className='home-contact-info'>
         <p className='home-contact-info-title'>Skontaktuj się z nami</p>
+        {isSubmit && (
+          <p className='success-text'>
+            Wiadomość została wysłana! <br /> Wktórce się skontaktujemy.
+          </p>
+        )}
         <div className='decoration'></div>
         <div className='home-contact-info-details'>
           <div>
             <p>Wpisz swoje imię</p>
             <input
               type='text'
-              name='username'
+              name='name'
               id='contactName'
               className='ditails-name'
               placeholder='Krzysztof'
-              value={formValues.username}
+              value={formValues.name}
               onChange={handleChange}></input>
-            <p>{formErrors.username}</p>
+            <p>{formErrors.name}</p>
           </div>
           <div>
             <p>Wpisz swój email</p>
