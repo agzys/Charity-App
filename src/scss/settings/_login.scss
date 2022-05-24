@@ -20,28 +20,31 @@
 }
 .login-form-values {
   margin-top: 20px;
-  margin-left: 67px;
-  width: 250px;
+  margin-left: 55px;
+  width: 270px;
   height: 60px;
 }
 .login-form-text {
   font-size: 16px;
 }
 .login-form-input {
-  margin-top: 20px;
-  width: 250px;
+  margin-top: 10px;
+  font-size: 16px;
+  height: 26px;
+  width: 270px;
   background-color: $background-color;
   border: none;
   border-bottom: 2px solid black;
 }
 
-.form-btns {
+.login-form-btns {
   width: 480px;
   height: 50px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 100px;
+  margin-left: -45px;
+
   .create-account-btn {
     border: none;
     background-color: white;
@@ -54,4 +57,7 @@
     cursor: pointer;
     border: 1px solid $log-create-account-text-color;
   }
+}
+.login-errors {
+  color: red;
 }

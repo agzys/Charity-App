@@ -30,7 +30,6 @@ function HomeContact() {
         .then(res => {
           console.log("Dodałem użytkownika:");
           console.log(res.status);
-          console.log(formValues);
         });
     }
   };
@@ -68,7 +67,7 @@ function HomeContact() {
         <p className='home-contact-info-title'>Skontaktuj się z nami</p>
         {isSubmit && (
           <p className='success-text'>
-            Wiadomość została wysłana! <br /> Wktórce się skontaktujemy.
+            Wiadomość została wysłana! <br /> Wkrótce się skontaktujemy.
           </p>
         )}
         <div className='decoration'></div>
