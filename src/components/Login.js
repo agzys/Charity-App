@@ -25,7 +25,7 @@ function Login() {
     }
   });
 
-  const validate = values => {
+ const validate = values => {
     const errors = {};
     const regex =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;

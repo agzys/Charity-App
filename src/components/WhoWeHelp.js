@@ -7,9 +7,9 @@ import ReactPaginate from "react-paginate";
 function WhoWeHelp() {
   const [activeSection, setActiveSection] = useState("fundations");
 
-  const [infos, setInfos] = useState(FundationsJsonData.slice(0, 9));
-  const [orgsInfos, setOrgsInfos] = useState(OrganizationsJsonData.slice(0, 6));
-  const [collInfos, setcollInfos] = useState(CollectionsJsonData.slice(0, 3));
+  const [infos] = useState(FundationsJsonData.slice(0, 9));
+  const [orgsInfos] = useState(OrganizationsJsonData.slice(0, 6));
+  const [collInfos] = useState(CollectionsJsonData.slice(0, 3));
 
   const [pageNumber, setPageNumber] = useState(0);
 

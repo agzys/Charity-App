@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
+const contactValues = { name: "", email: "", message: "" };
+const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`;
 
 function HomeContact() {
-  const contactValues = { name: "", email: "", message: "" };
   const [formValues, setFormValues] = useState(contactValues);
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState(contactValues);
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = e => {
@@ -11,14 +13,21 @@ function HomeContact() {
     setFormValues({ ...formValues, [name]: value });
   };
 
+  const onBlur = () => {
+    setFormErrors(validate(formValues));
+  };
+
+  const resetForm = () => {
+    setFormValues({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-
-    const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`;
-
-    if (isSubmit) {
+    if (!formErrors.name && !formErrors.email && !formErrors.message) {
       fetch(url, {
         method: "POST",
         headers: {
@@ -28,35 +37,37 @@ function HomeContact() {
       })
         .then(res => res.json())
         .then(res => {
-          console.log("Dodałem użytkownika:");
-          console.log(res.status);
+          resetForm();
+          setIsSubmit(true);
+          setTimeout(() => {
+            setIsSubmit(false);
+          }, 3000);
         });
     }
   };
-
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  });
 
   const validate = values => {
     const errors = {};
     const regex =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    if (!values.name) {
+    if (!values?.name) {
       errors.name = "Podane imię jest nieprawidłowe!";
+    } else {
+      errors.name = "";
     }
-    if (!values.email) {
+    if (!values?.email) {
       errors.email = "Podaney email jest nieprawidłowy!";
-    } else if (!regex.test(values.email)) {
+    } else if (!regex.test(values?.email)) {
       errors.email = "Podaney email jest nieprawidłowy!";
+    } else {
+      errors.email = "";
     }
-    if (!values.message) {
+    if (!values?.message) {
       errors.message = "Wiadomość musi mieć conajmniej 120 znaków!";
-    } else if (values.message.length < 120) {
+    } else if (values?.message?.length < 120) {
       errors.message = "Wiadomość jest za krótka";
+    } else {
+      errors.message = "";
     }
     return errors;
   };
@@ -81,8 +92,9 @@ function HomeContact() {
               className='ditails-name'
               placeholder='Krzysztof'
               value={formValues.name}
-              onChange={handleChange}></input>
-            <p>{formErrors.name}</p>
+              onChange={handleChange}
+              onBlur={onBlur}></input>
+            <p>{formErrors?.name}</p>
           </div>
           <div>
             <p>Wpisz swój email</p>
@@ -93,8 +105,9 @@ function HomeContact() {
               className='ditails-email'
               placeholder='abcd@xyz.com'
               value={formValues.email}
-              onChange={handleChange}></input>
-            <p>{formErrors.email}</p>
+              onChange={handleChange}
+              onBlur={onBlur}></input>
+            <p>{formErrors?.email}</p>
           </div>
         </div>
         <div>
@@ -106,8 +119,9 @@ function HomeContact() {
             className='ditails-message'
             placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
             value={formValues.message}
-            onChange={handleChange}></input>
-          <p>{formErrors.message}</p>
+            onChange={handleChange}
+            onBlur={onBlur}></input>
+          <p>{formErrors?.message}</p>
         </div>
         <button className='contact-send-btn'>Wyślij</button>
       </form>
